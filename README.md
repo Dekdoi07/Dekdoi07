@@ -11,6 +11,8 @@
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=2E90FA&center=true&vCenter=true&width=550&lines=Computer+Science+%26+Embedded+Systems(ESP32);Hardware+tinkerer+%26+volunteer+rescue+comm+operator)
 
 <br/>
+## คติประจำใจ
+"รื้อให้รู้ ซ่อมให้พัง แล้วสร้างใหม่ให้ดีกว่าเดิม"
 
 <!-- RANK:START -->
 [![Thailand GitHub Rank](https://img.shields.io/badge/Thailand_Rank-%23262_Public_Contributions-2E90FA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/thailand.md)
