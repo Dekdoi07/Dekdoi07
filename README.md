@@ -1,4 +1,4 @@
-# Hi there I'm Natthanon Charoenphon👋
+# Hi there I'm Dekdoi👋
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Dekdoi07/Dekdoi07/main/banner.svg" width="100%" alt="banner">
