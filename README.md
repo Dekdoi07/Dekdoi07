@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:1f6feb&height=200&section=header&text=Dekdoi07&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Computer%20Science%20%26%20Embedded%20Systems&descAlignY=58&descSize=18" width="100%" alt="banner">
+  <img src="https://raw.githubusercontent.com/Dekdoi07/Dekdoi07/main/banner.svg" width="100%" alt="banner">
   <br>
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=1F6FEB&center=true&vCenter=true&width=600&lines=ESP32+%7C+IoT+%7C+Embedded+Systems;Hardware+Hacker;Turning+circuits+into+ideas" alt="typing">
 </div>
