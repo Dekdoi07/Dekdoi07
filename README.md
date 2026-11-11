@@ -11,7 +11,7 @@
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=2E90FA&center=true&vCenter=true&width=550&lines=Computer+Science+%26+Embedded+Systems(ESP32);Hardware+tinkerer+%26+volunteer+rescue+comm+operator)
 
 <br/>
-## คติประจำใจ
+## คติประจำใจ <br>
 "รื้อให้รู้ ซ่อมให้พัง แล้วสร้างใหม่ให้ดีกว่าเดิม"
 
 <!-- RANK:START -->
