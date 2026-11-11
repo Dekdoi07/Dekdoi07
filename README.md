@@ -24,10 +24,6 @@
 
 ---
 
-<!-- RANK:START -->
-[![Thailand GitHub Rank](https://img.shields.io/badge/Thailand_Rank-%23262_Public_Contributions-2E90FA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/thailand.md)
-<!-- RANK:END -->
-
 <br/><br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](#)
@@ -41,7 +37,7 @@
 
 ## 🚀 About Me
 
-> **Dek Doi**, a Computer Science student at the University of Phayao who loves **Hardware & IoT** and is fascinated by electrical circuits. I like asking *"if the usual way works, would a different way still work?"* and then building it to find out.
+> **Dek Doi** , a Computer Science student at the University of Phayao who loves **Hardware & IoT** and is fascinated by electrical circuits. I like asking *"if the usual way works, would a different way still work?"* and then building it to find out.
 
 * 🎓 **Role:** Computer Science Student, University of Phayao (2nd year)
 * 🔬 **Interests:** Hardware, IoT, Electronics, Embedded Systems (ESP32 / Arduino)
