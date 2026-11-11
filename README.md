@@ -72,11 +72,14 @@
 
 <div align="center">
 
-💬 *Open for research collaborations, academic exchanges, and technology discussions.*
-
+<img src="https://github-readme-stats-fast.vercel.app/api?username=Dekdoi07&show_icons=true&theme=tokyonight&hide_border=true" height="165" />
+<img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Dekdoi07&layout=compact&theme=tokyonight&hide_border=true" height="165" />
 </div>
-<!--
-**Dekdoi07/Dekdoi07** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<br/><br/>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=thammarat-ai&theme=react-dark&hide_border=true" alt="GitHub Streak Stats" />
+</div>
 
 Here are some ideas to get you started:
 
