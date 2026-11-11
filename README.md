@@ -4,7 +4,6 @@
   <img src="https://raw.githubusercontent.com/Dekdoi07/Dekdoi07/main/banner.svg" width="100%" alt="banner">
   <br>
 </div>
----
 
 
 <div align="center">
