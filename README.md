@@ -1,7 +1,6 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/Dekdoi07/Dekdoi07/main/banner.svg" width="100%" alt="banner">
   <br>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=1F6FEB&center=true&vCenter=true&width=600&lines=ESP32+%7C+IoT+%7C+Embedded+Systems;Hardware+Hacker;Turning+circuits+into+ideas" alt="typing">
 </div>
 ---
 ## Hi there I'm Natthanon Charoenphon👋
