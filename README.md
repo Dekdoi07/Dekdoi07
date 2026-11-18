@@ -8,7 +8,7 @@
 
 <div align="center">
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=2E90FA&center=true&vCenter=true&width=800&lines=Computer+Science+%26+Embedded+Systems+%28ESP32%29;Hardware+tinkerer+%26+volunteer+rescue+comm+operator)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=2E90FA&center=true&vCenter=true&width=800&lines=Computer+Science+%26+Embedded+Systems+%28ESP32%29;Building+IoT%2C+GIS+%26+Rescue+Comm+Systems)
 
 <br/>
 
