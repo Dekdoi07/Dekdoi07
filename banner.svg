@@ -1,32 +1,14 @@
 <svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#07090f"/>
-      <stop offset="55%" stop-color="#0b1120"/>
-      <stop offset="100%" stop-color="#0f1f3f"/>
+      <stop offset="0%" stop-color="#090d14"/>
+      <stop offset="55%" stop-color="#0d1526"/>
+      <stop offset="100%" stop-color="#112952"/>
     </linearGradient>
 
     <pattern id="pcbGrid" width="24" height="24" patternUnits="userSpaceOnUse">
       <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1f6feb" stroke-width="0.6" stroke-opacity="0.09"/>
     </pattern>
-
-    <pattern id="hazard" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="20" height="20" fill="#0a0d14"/>
-      <rect width="10" height="20" fill="#ffd400"/>
-    </pattern>
-
-    <radialGradient id="redGlow" cx="0.5" cy="0" r="1">
-      <stop offset="0%" stop-color="#ff2d3f" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#ff2d3f" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="blueGlow" cx="0.5" cy="0" r="1">
-      <stop offset="0%" stop-color="#2f81f7" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#2f81f7" stop-opacity="0"/>
-    </radialGradient>
-
-    <clipPath id="shape">
-      <polygon points="0,0 868,0 900,32 900,220 32,220 0,188"/>
-    </clipPath>
 
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -37,20 +19,13 @@
     </filter>
 
     <style>
-      .track { fill: none; stroke: #1a2d52; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .track { fill: none; stroke: #16335e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
       .pulse { fill: none; stroke: #58a6ff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 22 74; animation: dataFlow 2.6s linear infinite; }
-      .pulse-red { stroke: #ff3b4e; }
       .pulse-rev { animation-direction: reverse; animation-duration: 3.1s; }
       .pulse-fast { animation-duration: 2s; }
       @keyframes dataFlow { to { stroke-dashoffset: -96; } }
 
-      /* siren: red and blue alternate */
-      .flashA { animation: flashA 0.9s steps(1) infinite; }
-      .flashB { animation: flashB 0.9s steps(1) infinite; }
-      @keyframes flashA { 0% { opacity: 1; } 50% { opacity: 0.12; } 100% { opacity: 1; } }
-      @keyframes flashB { 0% { opacity: 0.12; } 50% { opacity: 1; } 100% { opacity: 0.12; } }
-
-      .wave { fill: none; stroke: #3fb950; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 180; stroke-dashoffset: 180; animation: scope 2.4s ease-in-out infinite; }
+      .wave { fill: none; stroke: #3fb950; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 180; stroke-dashoffset: 180; animation: scope 2.8s ease-in-out infinite; }
       @keyframes scope {
         0% { stroke-dashoffset: 180; opacity: 0.4; }
         50% { stroke-dashoffset: 0; opacity: 1; }
@@ -59,139 +34,98 @@
 
       .led-green { fill: #3fb950; animation: ledBlink 1.8s ease-in-out infinite; }
       .led-blue { fill: #58a6ff; animation: ledBlink 1.4s ease-in-out infinite; }
-      .led-red { fill: #ff2d3f; animation: ledBlink 0.9s steps(1) infinite; }
-      @keyframes ledBlink { 50% { opacity: 0.2; } }
-
-      /* glitch title */
-      .g-red { fill: #ff2d3f; animation: glitchR 3s steps(1) infinite; }
-      .g-cyan { fill: #00e5ff; animation: glitchC 3s steps(1) infinite; }
-      @keyframes glitchR {
-        0%, 88%, 100% { transform: translate(0, 0); }
-        90% { transform: translate(-4px, 1px); }
-        93% { transform: translate(3px, -1px); }
-        96% { transform: translate(-2px, 0); }
-      }
-      @keyframes glitchC {
-        0%, 88%, 100% { transform: translate(0, 0); }
-        90% { transform: translate(4px, -1px); }
-        93% { transform: translate(-3px, 1px); }
-        96% { transform: translate(2px, 0); }
-      }
-      .scan { animation: scanMove 4s linear infinite; }
-      @keyframes scanMove { from { transform: translateY(0); } to { transform: translateY(220px); } }
+      @keyframes ledBlink { 50% { opacity: 0.25; } }
 
       .pin { fill: #2f81f7; }
-      .tag { font: 700 11px 'Courier New', monospace; fill: #ff4d5e; letter-spacing: 2px; }
-      .title { font: 700 46px 'Courier New', monospace; }
+      .tag { font: 700 11px 'Courier New', monospace; fill: #388bfd; letter-spacing: 2px; }
+      .title { font: 700 46px 'Courier New', monospace; fill: #ffffff; }
       .sub { font: 600 17px 'Courier New', monospace; fill: #79c0ff; }
       .status { font: 600 11px 'Courier New', monospace; fill: #8b949e; letter-spacing: 0.8px; }
       .chip-title { font: 700 16px 'Courier New', monospace; fill: #79c0ff; }
       .chip-sub { font: 700 9px 'Courier New', monospace; fill: #388bfd; letter-spacing: 1px; }
-      .hud-text { font: 700 10px 'Courier New', monospace; fill: #ff6b79; letter-spacing: 1px; }
+      .hud-text { font: 700 10px 'Courier New', monospace; fill: #58a6ff; letter-spacing: 1px; }
       .hud-sub { font: 600 9.5px 'Courier New', monospace; fill: #8b949e; }
-      .rec { font: 700 9px 'Courier New', monospace; fill: #ff2d3f; letter-spacing: 1px; }
     </style>
   </defs>
 
-  <g clip-path="url(#shape)">
-    <polygon points="0,0 868,0 900,32 900,220 32,220 0,188" fill="url(#bg)"/>
-    <rect width="900" height="220" fill="url(#pcbGrid)"/>
+  <rect x="1" y="1" width="898" height="218" rx="14" fill="url(#bg)" stroke="#1f6feb" stroke-opacity="0.45" stroke-width="1.5"/>
+  <rect x="1" y="1" width="898" height="218" rx="14" fill="url(#pcbGrid)"/>
 
-    <!-- siren light bleed -->
-    <ellipse class="flashA" cx="150" cy="0" rx="330" ry="120" fill="url(#redGlow)"/>
-    <ellipse class="flashB" cx="750" cy="0" rx="330" ry="120" fill="url(#blueGlow)"/>
+  <path class="track" d="M92.5 54 V32 L74 18 H0"/>
+  <path class="track" d="M128.5 54 V26 L144 14 H360 L374 26 H430"/>
+  <path class="track" d="M92.5 166 V188 L74 202 H0"/>
+  <path class="track" d="M128.5 166 V194 L144 206 H450 L466 192 H520"/>
+  <path class="track" d="M57 101.5 H28 L16 89 H0"/>
+  <path class="track" d="M630 26 H760 L784 48 H900"/>
+  <path class="track" d="M605 192 H740 L764 170 H900"/>
 
-    <!-- PCB tracks -->
-    <path class="track" d="M92.5 54 V32 L74 18 H0"/>
-    <path class="track" d="M128.5 54 V26 L144 14 H360 L374 26 H430"/>
-    <path class="track" d="M92.5 166 V188 L74 202 H0"/>
-    <path class="track" d="M128.5 166 V194 L144 206 H450 L466 192 H520"/>
-    <path class="track" d="M57 101.5 H28 L16 89 H0"/>
-    <path class="track" d="M630 26 H760 L784 48 H900"/>
-    <path class="track" d="M605 192 H740 L764 170 H900"/>
+  <path class="pulse" d="M92.5 54 V32 L74 18 H0"/>
+  <path class="pulse pulse-fast" d="M128.5 54 V26 L144 14 H360 L374 26 H430"/>
+  <path class="pulse pulse-rev" d="M92.5 166 V188 L74 202 H0"/>
+  <path class="pulse" d="M128.5 166 V194 L144 206 H450 L466 192 H520"/>
+  <path class="pulse pulse-fast" d="M57 101.5 H28 L16 89 H0"/>
+  <path class="pulse pulse-rev" d="M630 26 H760 L784 48 H900"/>
+  <path class="pulse" d="M605 192 H740 L764 170 H900"/>
 
-    <path class="pulse pulse-red" d="M92.5 54 V32 L74 18 H0"/>
-    <path class="pulse pulse-fast" d="M128.5 54 V26 L144 14 H360 L374 26 H430"/>
-    <path class="pulse pulse-rev pulse-red" d="M92.5 166 V188 L74 202 H0"/>
-    <path class="pulse" d="M128.5 166 V194 L144 206 H450 L466 192 H520"/>
-    <path class="pulse pulse-fast pulse-red" d="M57 101.5 H28 L16 89 H0"/>
-    <path class="pulse pulse-rev" d="M630 26 H760 L784 48 H900"/>
-    <path class="pulse pulse-red" d="M605 192 H740 L764 170 H900"/>
-
-    <g>
-      <circle cx="430" cy="26" r="5" fill="#1f6feb"/><circle cx="430" cy="26" r="2" fill="#07090f"/>
-      <circle cx="520" cy="192" r="5" fill="#1f6feb"/><circle cx="520" cy="192" r="2" fill="#07090f"/>
-      <circle cx="630" cy="26" r="5" fill="#1f6feb"/><circle cx="630" cy="26" r="2" fill="#07090f"/>
-      <circle cx="605" cy="192" r="5" fill="#ff2d3f"/><circle cx="605" cy="192" r="2" fill="#07090f"/>
-      <circle cx="28" cy="101.5" r="4.5" fill="#ff2d3f"/><circle cx="28" cy="101.5" r="1.8" fill="#07090f"/>
-    </g>
-
-    <!-- chip pins -->
-    <g class="pin">
-      <rect x="78" y="54" width="5" height="8" rx="1"/><rect x="90" y="54" width="5" height="8" rx="1"/>
-      <rect x="102" y="54" width="5" height="8" rx="1"/><rect x="114" y="54" width="5" height="8" rx="1"/>
-      <rect x="126" y="54" width="5" height="8" rx="1"/><rect x="138" y="54" width="5" height="8" rx="1"/>
-      <rect x="78" y="158" width="5" height="8" rx="1"/><rect x="90" y="158" width="5" height="8" rx="1"/>
-      <rect x="102" y="158" width="5" height="8" rx="1"/><rect x="114" y="158" width="5" height="8" rx="1"/>
-      <rect x="126" y="158" width="5" height="8" rx="1"/><rect x="138" y="158" width="5" height="8" rx="1"/>
-      <rect x="57" y="75" width="8" height="5" rx="1"/><rect x="57" y="87" width="8" height="5" rx="1"/>
-      <rect x="57" y="99" width="8" height="5" rx="1"/><rect x="57" y="111" width="8" height="5" rx="1"/>
-      <rect x="57" y="123" width="8" height="5" rx="1"/><rect x="57" y="135" width="8" height="5" rx="1"/>
-      <rect x="161" y="75" width="8" height="5" rx="1"/><rect x="161" y="87" width="8" height="5" rx="1"/>
-      <rect x="161" y="99" width="8" height="5" rx="1"/><rect x="161" y="111" width="8" height="5" rx="1"/>
-      <rect x="161" y="123" width="8" height="5" rx="1"/><rect x="161" y="135" width="8" height="5" rx="1"/>
-    </g>
-
-    <!-- chip -->
-    <rect x="65" y="62" width="96" height="96" rx="10" fill="#07090f" stroke="#ff2d3f" stroke-width="2" filter="url(#glow)"/>
-    <rect x="74" y="71" width="78" height="78" rx="5" fill="#0b1120" stroke="#1f6feb" stroke-width="1" stroke-dasharray="4 2"/>
-    <circle cx="81" cy="78" r="2.5" class="led-red"/>
-    <circle cx="145" cy="78" r="2.5" class="led-blue"/>
-    <text class="chip-title" x="113" y="108" text-anchor="middle">ESP32</text>
-    <text class="chip-sub" x="113" y="124" text-anchor="middle">SOC // MCU</text>
-
-    <!-- title block -->
-    <text class="tag" x="200" y="68">// HARDWARE &amp; SOFTWARE MAKER</text>
-    <text class="title g-red" x="198" y="108">Dekdoi07</text>
-    <text class="title g-cyan" x="198" y="108">Dekdoi07</text>
-    <text class="title" x="198" y="108" fill="#ffffff" filter="url(#glow)">Dekdoi07</text>
-    <text class="sub" x="200" y="138">Computer Science &amp; Embedded Systems</text>
-
-    <circle cx="205" cy="162" r="4" class="led-green"/>
-    <text class="status" x="216" y="166">SYS_ONLINE  •  ESP32  •  GIS  •  RF_COMMS  •  SIREN</text>
-
-    <!-- HUD -->
-    <polygon points="665,66 840,66 850,76 850,154 665,154" fill="#07090f" fill-opacity="0.8" stroke="#ff2d3f" stroke-opacity="0.6" stroke-width="1.2"/>
-    <text class="hud-text" x="679" y="84">RF // TELEMETRY</text>
-    <circle cx="797" cy="80" r="3.5" class="led-red"/>
-    <text class="rec" x="805" y="83">REC</text>
-
-    <line x1="678" y1="115" x2="837" y2="115" stroke="#3fb950" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="2 2"/>
-    <path class="wave" filter="url(#glow)" d="M678 115 H706 L713 98 L720 132 L727 92 L734 136 L741 108 L747 115 H778 L785 103 L792 127 L798 115 H837"/>
-
-    <text class="hud-sub" x="679" y="144">PWR: 3.3V    LINK: ACTIVE</text>
-
-    <!-- scanline -->
-    <rect class="scan" x="0" y="-6" width="900" height="3" fill="#ffffff" fill-opacity="0.05"/>
-
-    <!-- siren light bar (top) -->
-    <g>
-      <rect class="flashA" x="0" y="0" width="90" height="7" fill="#ff2d3f"/>
-      <rect class="flashB" x="90" y="0" width="90" height="7" fill="#2f81f7"/>
-      <rect class="flashA" x="180" y="0" width="90" height="7" fill="#ff2d3f"/>
-      <rect class="flashB" x="270" y="0" width="90" height="7" fill="#2f81f7"/>
-      <rect class="flashA" x="360" y="0" width="90" height="7" fill="#ff2d3f"/>
-      <rect class="flashB" x="450" y="0" width="90" height="7" fill="#2f81f7"/>
-      <rect class="flashA" x="540" y="0" width="90" height="7" fill="#ff2d3f"/>
-      <rect class="flashB" x="630" y="0" width="90" height="7" fill="#2f81f7"/>
-      <rect class="flashA" x="720" y="0" width="90" height="7" fill="#ff2d3f"/>
-      <rect class="flashB" x="810" y="0" width="90" height="7" fill="#2f81f7"/>
-    </g>
-
-    <!-- hazard strip (bottom) -->
-    <rect x="0" y="212" width="900" height="8" fill="url(#hazard)" opacity="0.9"/>
+  <g>
+    <circle cx="430" cy="26" r="5" fill="#1f6feb"/>
+    <circle cx="430" cy="26" r="2" fill="#090d14"/>
+    <circle cx="520" cy="192" r="5" fill="#1f6feb"/>
+    <circle cx="520" cy="192" r="2" fill="#090d14"/>
+    <circle cx="630" cy="26" r="5" fill="#1f6feb"/>
+    <circle cx="630" cy="26" r="2" fill="#090d14"/>
+    <circle cx="605" cy="192" r="5" fill="#1f6feb"/>
+    <circle cx="605" cy="192" r="2" fill="#090d14"/>
+    <circle cx="28" cy="101.5" r="4.5" fill="#1f6feb"/>
+    <circle cx="28" cy="101.5" r="1.8" fill="#090d14"/>
   </g>
 
-  <!-- angular border -->
-  <polygon points="0.75,0.75 868,0.75 899.25,32 899.25,219.25 32,219.25 0.75,188" fill="none" stroke="#ff2d3f" stroke-opacity="0.7" stroke-width="1.5"/>
+  <g class="pin">
+    <rect x="78" y="54" width="5" height="8" rx="1"/>
+    <rect x="90" y="54" width="5" height="8" rx="1"/>
+    <rect x="102" y="54" width="5" height="8" rx="1"/>
+    <rect x="114" y="54" width="5" height="8" rx="1"/>
+    <rect x="126" y="54" width="5" height="8" rx="1"/>
+    <rect x="138" y="54" width="5" height="8" rx="1"/>
+    <rect x="78" y="158" width="5" height="8" rx="1"/>
+    <rect x="90" y="158" width="5" height="8" rx="1"/>
+    <rect x="102" y="158" width="5" height="8" rx="1"/>
+    <rect x="114" y="158" width="5" height="8" rx="1"/>
+    <rect x="126" y="158" width="5" height="8" rx="1"/>
+    <rect x="138" y="158" width="5" height="8" rx="1"/>
+    <rect x="57" y="75" width="8" height="5" rx="1"/>
+    <rect x="57" y="87" width="8" height="5" rx="1"/>
+    <rect x="57" y="99" width="8" height="5" rx="1"/>
+    <rect x="57" y="111" width="8" height="5" rx="1"/>
+    <rect x="57" y="123" width="8" height="5" rx="1"/>
+    <rect x="57" y="135" width="8" height="5" rx="1"/>
+    <rect x="161" y="75" width="8" height="5" rx="1"/>
+    <rect x="161" y="87" width="8" height="5" rx="1"/>
+    <rect x="161" y="99" width="8" height="5" rx="1"/>
+    <rect x="161" y="111" width="8" height="5" rx="1"/>
+    <rect x="161" y="123" width="8" height="5" rx="1"/>
+    <rect x="161" y="135" width="8" height="5" rx="1"/>
+  </g>
+
+  <rect x="65" y="62" width="96" height="96" rx="10" fill="#090d14" stroke="#2f81f7" stroke-width="2" filter="url(#glow)"/>
+  <rect x="74" y="71" width="78" height="78" rx="5" fill="#0d1526" stroke="#1f6feb" stroke-width="1" stroke-dasharray="4 2"/>
+  <circle cx="81" cy="78" r="2.5" class="led-blue"/>
+  <text class="chip-title" x="113" y="108" text-anchor="middle">ESP32</text>
+  <text class="chip-sub" x="113" y="124" text-anchor="middle">SOC // MCU</text>
+
+  <text class="tag" x="200" y="68">// HARDWARE &amp; SOFTWARE MAKER</text>
+  <text class="title" x="198" y="108" filter="url(#glow)">Dekdoi07</text>
+  <text class="sub" x="200" y="138">Computer Science &amp; Embedded Systems</text>
+
+  <circle cx="205" cy="162" r="4" class="led-green"/>
+  <text class="status" x="216" y="166">SYS_ONLINE  •  ESP32  •  GIS  •  RF_COMMS</text>
+
+  <rect x="665" y="66" width="185" height="88" rx="8" fill="#090d14" fill-opacity="0.75" stroke="#1f6feb" stroke-opacity="0.5" stroke-width="1.2"/>
+  <text class="hud-text" x="679" y="84">RF // TELEMETRY</text>
+  <circle cx="835" cy="80" r="3.5" class="led-green"/>
+
+  <line x1="678" y1="115" x2="837" y2="115" stroke="#1f6feb" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="2 2"/>
+  <path class="wave" filter="url(#glow)" d="M678 115 H706 L713 98 L720 132 L727 92 L734 136 L741 108 L747 115 H778 L785 103 L792 127 L798 115 H837"/>
+
+  <text class="hud-sub" x="679" y="144">PWR: 3.3V    LINK: ACTIVE</text>
 </svg>
