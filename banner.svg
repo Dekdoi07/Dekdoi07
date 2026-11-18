@@ -1,14 +1,32 @@
 <svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#090d14"/>
-      <stop offset="55%" stop-color="#0d1526"/>
-      <stop offset="100%" stop-color="#112952"/>
+      <stop offset="0%" stop-color="#07090f"/>
+      <stop offset="55%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#0f1f3f"/>
     </linearGradient>
 
     <pattern id="pcbGrid" width="24" height="24" patternUnits="userSpaceOnUse">
       <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1f6feb" stroke-width="0.6" stroke-opacity="0.09"/>
     </pattern>
+
+    <pattern id="hazard" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="20" height="20" fill="#0a0d14"/>
+      <rect width="10" height="20" fill="#ffd400"/>
+    </pattern>
+
+    <radialGradient id="redGlow" cx="0.5" cy="0" r="1">
+      <stop offset="0%" stop-color="#ff2d3f" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff2d3f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="0.5" cy="0" r="1">
+      <stop offset="0%" stop-color="#2f81f7" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#2f81f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <clipPath id="shape">
+      <polygon points="0,0 868,0 900,32 900,220 32,220 0,188"/>
+    </clipPath>
 
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -19,113 +37,11 @@
     </filter>
 
     <style>
-      .track { fill: none; stroke: #16335e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .track { fill: none; stroke: #1a2d52; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
       .pulse { fill: none; stroke: #58a6ff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 22 74; animation: dataFlow 2.6s linear infinite; }
+      .pulse-red { stroke: #ff3b4e; }
       .pulse-rev { animation-direction: reverse; animation-duration: 3.1s; }
       .pulse-fast { animation-duration: 2s; }
       @keyframes dataFlow { to { stroke-dashoffset: -96; } }
 
-      .wave { fill: none; stroke: #3fb950; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 180; stroke-dashoffset: 180; animation: scope 2.8s ease-in-out infinite; }
-      @keyframes scope {
-        0% { stroke-dashoffset: 180; opacity: 0.4; }
-        50% { stroke-dashoffset: 0; opacity: 1; }
-        100% { stroke-dashoffset: -180; opacity: 0.4; }
-      }
-
-      .led-green { fill: #3fb950; animation: ledBlink 1.8s ease-in-out infinite; }
-      .led-blue { fill: #58a6ff; animation: ledBlink 1.4s ease-in-out infinite; }
-      @keyframes ledBlink { 50% { opacity: 0.25; } }
-
-      .pin { fill: #2f81f7; }
-      .tag { font: 700 11px 'Courier New', monospace; fill: #388bfd; letter-spacing: 2px; }
-      .title { font: 700 46px 'Courier New', monospace; fill: #ffffff; }
-      .sub { font: 600 17px 'Courier New', monospace; fill: #79c0ff; }
-      .status { font: 600 11px 'Courier New', monospace; fill: #8b949e; letter-spacing: 0.8px; }
-      .chip-title { font: 700 16px 'Courier New', monospace; fill: #79c0ff; }
-      .chip-sub { font: 700 9px 'Courier New', monospace; fill: #388bfd; letter-spacing: 1px; }
-      .hud-text { font: 700 10px 'Courier New', monospace; fill: #58a6ff; letter-spacing: 1px; }
-      .hud-sub { font: 600 9.5px 'Courier New', monospace; fill: #8b949e; }
-    </style>
-  </defs>
-
-  <rect x="1" y="1" width="898" height="218" rx="14" fill="url(#bg)" stroke="#1f6feb" stroke-opacity="0.45" stroke-width="1.5"/>
-  <rect x="1" y="1" width="898" height="218" rx="14" fill="url(#pcbGrid)"/>
-
-  <path class="track" d="M92.5 54 V32 L74 18 H0"/>
-  <path class="track" d="M128.5 54 V26 L144 14 H360 L374 26 H430"/>
-  <path class="track" d="M92.5 166 V188 L74 202 H0"/>
-  <path class="track" d="M128.5 166 V194 L144 206 H450 L466 192 H520"/>
-  <path class="track" d="M57 101.5 H28 L16 89 H0"/>
-  <path class="track" d="M630 26 H760 L784 48 H900"/>
-  <path class="track" d="M605 192 H740 L764 170 H900"/>
-
-  <path class="pulse" d="M92.5 54 V32 L74 18 H0"/>
-  <path class="pulse pulse-fast" d="M128.5 54 V26 L144 14 H360 L374 26 H430"/>
-  <path class="pulse pulse-rev" d="M92.5 166 V188 L74 202 H0"/>
-  <path class="pulse" d="M128.5 166 V194 L144 206 H450 L466 192 H520"/>
-  <path class="pulse pulse-fast" d="M57 101.5 H28 L16 89 H0"/>
-  <path class="pulse pulse-rev" d="M630 26 H760 L784 48 H900"/>
-  <path class="pulse" d="M605 192 H740 L764 170 H900"/>
-
-  <g>
-    <circle cx="430" cy="26" r="5" fill="#1f6feb"/>
-    <circle cx="430" cy="26" r="2" fill="#090d14"/>
-    <circle cx="520" cy="192" r="5" fill="#1f6feb"/>
-    <circle cx="520" cy="192" r="2" fill="#090d14"/>
-    <circle cx="630" cy="26" r="5" fill="#1f6feb"/>
-    <circle cx="630" cy="26" r="2" fill="#090d14"/>
-    <circle cx="605" cy="192" r="5" fill="#1f6feb"/>
-    <circle cx="605" cy="192" r="2" fill="#090d14"/>
-    <circle cx="28" cy="101.5" r="4.5" fill="#1f6feb"/>
-    <circle cx="28" cy="101.5" r="1.8" fill="#090d14"/>
-  </g>
-
-  <g class="pin">
-    <rect x="78" y="54" width="5" height="8" rx="1"/>
-    <rect x="90" y="54" width="5" height="8" rx="1"/>
-    <rect x="102" y="54" width="5" height="8" rx="1"/>
-    <rect x="114" y="54" width="5" height="8" rx="1"/>
-    <rect x="126" y="54" width="5" height="8" rx="1"/>
-    <rect x="138" y="54" width="5" height="8" rx="1"/>
-    <rect x="78" y="158" width="5" height="8" rx="1"/>
-    <rect x="90" y="158" width="5" height="8" rx="1"/>
-    <rect x="102" y="158" width="5" height="8" rx="1"/>
-    <rect x="114" y="158" width="5" height="8" rx="1"/>
-    <rect x="126" y="158" width="5" height="8" rx="1"/>
-    <rect x="138" y="158" width="5" height="8" rx="1"/>
-    <rect x="57" y="75" width="8" height="5" rx="1"/>
-    <rect x="57" y="87" width="8" height="5" rx="1"/>
-    <rect x="57" y="99" width="8" height="5" rx="1"/>
-    <rect x="57" y="111" width="8" height="5" rx="1"/>
-    <rect x="57" y="123" width="8" height="5" rx="1"/>
-    <rect x="57" y="135" width="8" height="5" rx="1"/>
-    <rect x="161" y="75" width="8" height="5" rx="1"/>
-    <rect x="161" y="87" width="8" height="5" rx="1"/>
-    <rect x="161" y="99" width="8" height="5" rx="1"/>
-    <rect x="161" y="111" width="8" height="5" rx="1"/>
-    <rect x="161" y="123" width="8" height="5" rx="1"/>
-    <rect x="161" y="135" width="8" height="5" rx="1"/>
-  </g>
-
-  <rect x="65" y="62" width="96" height="96" rx="10" fill="#090d14" stroke="#2f81f7" stroke-width="2" filter="url(#glow)"/>
-  <rect x="74" y="71" width="78" height="78" rx="5" fill="#0d1526" stroke="#1f6feb" stroke-width="1" stroke-dasharray="4 2"/>
-  <circle cx="81" cy="78" r="2.5" class="led-blue"/>
-  <text class="chip-title" x="113" y="108" text-anchor="middle">ESP32</text>
-  <text class="chip-sub" x="113" y="124" text-anchor="middle">SOC // MCU</text>
-
-  <text class="tag" x="200" y="68">// HARDWARE &amp; SOFTWARE MAKER</text>
-  <text class="title" x="198" y="108" filter="url(#glow)">Dekdoi07</text>
-  <text class="sub" x="200" y="138">Computer Science &amp; Embedded Systems</text>
-
-  <circle cx="205" cy="162" r="4" class="led-green"/>
-  <text class="status" x="216" y="166">SYS_ONLINE  •  ESP32  •  GIS  •  RF_COMMS</text>
-
-  <rect x="665" y="66" width="185" height="88" rx="8" fill="#090d14" fill-opacity="0.75" stroke="#1f6feb" stroke-opacity="0.5" stroke-width="1.2"/>
-  <text class="hud-text" x="679" y="84">RF // TELEMETRY</text>
-  <circle cx="835" cy="80" r="3.5" class="led-green"/>
-
-  <line x1="678" y1="115" x2="837" y2="115" stroke="#1f6feb" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="2 2"/>
-  <path class="wave" filter="url(#glow)" d="M678 115 H706 L713 98 L720 132 L727 92 L734 136 L741 108 L747 115 H778 L785 103 L792 127 L798 115 H837"/>
-
-  <text class="hud-sub" x="679" y="144">PWR: 3.3V    LINK: ACTIVE</text>
-</svg>
+      /* siren: red and blue alternate */
